@@ -146,6 +146,7 @@
                     سجلي الآن - فوج الأربعاء متاح
                 </button>
 
+                <!-- Reduced height by changing py-4 to py-3 (approx 15% reduction) -->
                 <a href="https://wa.me/message/EKBPZNHXV2MKI1" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-green-600/90 backdrop-blur-sm border-2 border-green-500 text-white px-8 py-3 rounded-full text-lg md:text-xl font-bold hover:bg-green-600 transform hover:scale-105 transition duration-300 shadow-lg">
                     <i class="fab fa-whatsapp ml-2 text-2xl"></i>
                     تواصلي معنا
@@ -463,21 +464,52 @@
     <!-- Sticky Button Removed -->
 
     <!-- GOOGLE FORM MODAL -->
+    <!-- Updated with specific height for mobile (h-[90vh]) and fail-safe button -->
     <div id="formModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 transition-opacity duration-300 opacity-0" onclick="closeFormModal(event)">
-        <div class="relative w-full max-w-3xl h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+        <div class="relative w-full max-w-3xl h-[90vh] md:h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col" onclick="event.stopPropagation()">
              <!-- Header -->
             <div class="bg-ds-choco text-white p-4 flex justify-between items-center shadow-md relative z-10">
-                <h3 class="font-bold text-lg font-serif text-ds-gold">استمارة التسجيل</h3>
+                <div class="flex items-center gap-3">
+                    <h3 class="font-bold text-lg font-serif text-ds-gold">استمارة التسجيل</h3>
+                    
+                    <!-- FAIL-SAFE BUTTON: Opens form in new tab if iframe fails -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_bjzzZMbh2qLaD8dk144d0rYzfcFYuRcW7RyI-7huuCJyPA/viewform" 
+                       target="_blank"
+                       class="hidden md:flex items-center gap-1 text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition border border-white/20">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>فتح في نافذة جديدة</span>
+                    </a>
+                </div>
+
                 <button onclick="closeFormModal()" class="text-white hover:text-red-500 transition w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
-            <!-- Iframe Container -->
-            <div class="w-full h-[calc(100%-60px)] bg-gray-50">
+
+            <!-- Mobile Fallback Link (Visible only on small screens) -->
+            <div class="md:hidden bg-ds-gold/10 p-2 text-center border-b border-ds-gold/20">
+                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_bjzzZMbh2qLaD8dk144d0rYzfcFYuRcW7RyI-7huuCJyPA/viewform" 
+                   target="_blank"
+                   class="text-ds-choco text-xs font-bold flex items-center justify-center gap-2">
+                    <i class="fas fa-external-link-alt"></i>
+                    إذا لم تظهر الاستمارة، اضغطي هنا
+                </a>
+            </div>
+
+            <!-- Iframe Container with Sandbox attributes -->
+            <div class="w-full flex-grow bg-gray-50 relative">
+                <!-- Loading Indicator -->
+                <div class="absolute inset-0 flex items-center justify-center text-gray-400 z-0">
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-circle-notch fa-spin text-2xl mb-2 text-ds-gold"></i>
+                        <span>جاري تحميل الاستمارة...</span>
+                    </div>
+                </div>
+
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_bjzzZMbh2qLaD8dk144d0rYzfcFYuRcW7RyI-7huuCJyPA/viewform?embedded=true"
-                        class="w-full h-full border-0"
+                        class="w-full h-full border-0 relative z-10"
+                        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"
                         title="Google Form Registration">
-                        جاري التحميل...
                 </iframe>
             </div>
         </div>
