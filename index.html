@@ -88,18 +88,15 @@
         <div class="container mx-auto px-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-ds-gold font-serif tracking-wide drop-shadow-md">Dailyschool</div>
             
-            <!-- Modified Button: Direct Link instead of Modal Trigger -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_bjzzZMbh2qLaD8dk144d0rYzfcFYuRcW7RyI-7huuCJyPA/viewform?usp=header" target="_blank" class="bg-ds-gold text-ds-choco px-6 py-1.5 rounded-full hover:bg-white hover:scale-105 transition duration-300 shadow-[0_0_15px_rgba(212,175,55,0.5)] flex flex-col items-center justify-center leading-tight border-2 border-white/30 cursor-pointer no-underline">
+            <!-- Button: Triggers Custom Form Modal -->
+            <button onclick="openFormModal()" class="bg-ds-gold text-ds-choco px-6 py-1.5 rounded-full hover:bg-white hover:scale-105 transition duration-300 shadow-[0_0_15px_rgba(212,175,55,0.5)] flex flex-col items-center justify-center leading-tight border-2 border-white/30 cursor-pointer no-underline">
                 <span class="font-bold text-sm md:text-base">احجزي مقعدك</span>
                 <span class="text-[10px] md:text-xs font-medium opacity-90">(قبل نفاذ الأماكن)</span>
-            </a>
+            </button>
         </div>
     </nav>
 
-    <!-- Header removed as requested. Page starts with Gallery Section -->
-
     <!-- Gallery Section -->
-    <!-- Added pt-32 to account for fixed navbar overlay -->
     <section class="pt-32 pb-12 bg-ds-choco relative overflow-hidden border-b-8 border-ds-gold">
         <div class="container mx-auto px-4 mb-8 text-center relative z-10">
             <!-- Added Main Title Here -->
@@ -107,7 +104,6 @@
                 كل اصبع بصنعة
             </h1>
 
-            <!-- Removed 'معرض الأعمال' span -->
             <h2 class="text-2xl md:text-3xl font-bold text-white">
                 من بعض أعمال تلميذاتنا في الورشة - حققي نفس النتائج وأكثر
             </h2>
@@ -120,45 +116,68 @@
             <div class="flex animate-scroll w-max gap-6">
                 
                 <div class="flex gap-6 flex-shrink-0">
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/one.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 1" onerror="this.src='https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/two.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 2" onerror="this.src='https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/three.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 3" onerror="this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/four.jpg" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 4" onerror="this.src='https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/five.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 5" onerror="this.src='https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/six.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 6" onerror="this.src='https://images.unsplash.com/photo-1551024601-569d6f46319c?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/seven.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 7" onerror="this.src='https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/eight.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 8" onerror="this.src='https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/nine.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 9" onerror="this.src='https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    
                     <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30 group">
                         <img src="assets/ten.png" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" alt="Sweet 10" onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                </div>
+
+                <div class="flex gap-6 flex-shrink-0" aria-hidden="true">
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/one.png" class="w-full h-full object-cover" alt="Sweet 1" onerror="this.src='https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/two.png" class="w-full h-full object-cover" alt="Sweet 2" onerror="this.src='https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/three.png" class="w-full h-full object-cover" alt="Sweet 3" onerror="this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/four.jpg" class="w-full h-full object-cover" alt="Sweet 4" onerror="this.src='https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/five.png" class="w-full h-full object-cover" alt="Sweet 5" onerror="this.src='https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/six.png" class="w-full h-full object-cover" alt="Sweet 6" onerror="this.src='https://images.unsplash.com/photo-1551024601-569d6f46319c?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/seven.png" class="w-full h-full object-cover" alt="Sweet 7" onerror="this.src='https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/eight.png" class="w-full h-full object-cover" alt="Sweet 8" onerror="this.src='https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/nine.png" class="w-full h-full object-cover" alt="Sweet 9" onerror="this.src='https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="relative w-[30vw] h-[40vw] rounded-xl overflow-hidden shadow-lg border-2 border-ds-gold/30">
+                        <img src="assets/ten.png" class="w-full h-full object-cover" alt="Sweet 10" onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476d?auto=format&fit=crop&q=80&w=600'">
                     </div>
                 </div>
             </div>
@@ -196,15 +215,10 @@
                     </div>
 
                 </div>
-                
-                <!-- Removed the text block: "نضمن لكِ برنامجاً مكثفاً تتعلمين فيه..." -->
-
             </div>
         </div>
 
     </section>
-
-    <!-- REMOVED THE PREVIOUS TITLE SECTION FROM HERE -->
 
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
@@ -253,63 +267,7 @@
         </div>
     </section>
 
-    <section>
-         <div class="flex flex-nowrap justify-center items-center gap-4 md:gap-6 pb-12 pt-4">
-             <a href="#register" class="inline-flex items-center justify-center bg-ds-gold text-ds-choco px-8 py-4 md:px-12 md:py-6 rounded-full font-bold text-lg md:text-2xl hover:bg-ds-choco hover:text-white transition duration-300 shadow-xl transform hover:scale-105 whitespace-nowrap">
-                احجزي مكانك
-             </a>
-             <a href="https://wa.me/message/EKBPZNHXV2MKI1" target="_blank" class="inline-flex items-center justify-center bg-green-500 text-white px-8 py-4 md:px-12 md:py-6 rounded-full font-bold text-lg md:text-2xl hover:bg-green-600 transition duration-300 shadow-xl transform hover:scale-105 whitespace-nowrap">
-                <i class="fab fa-whatsapp ml-3 text-2xl md:text-3xl"></i>
-                واتساب
-             </a>
-         </div>
-    </section>
-
-    <section class="py-20 bg-ds-cream overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="absolute -top-4 -left-4 w-full h-full border-4 border-ds-gold rounded-2xl z-0 hidden lg:block"></div>
-                    <img src="assets/eleven.jpg" 
-                         alt="Course Content Preview" 
-                         onerror="this.src='https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?q=80&w=2626&auto=format&fit=crop'"
-                         class="relative z-10 w-full rounded-2xl shadow-2xl transform hover:scale-[1.02] transition duration-500">
-                </div>
-
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-3xl md:text-5xl font-bold text-ds-choco mb-6 leading-snug">
-                        من الصفر إلى الاحتراف<br>
-                    </h2>
-                    <p class="text-lg text-gray-700 mb-8">
-                       برنامج مصمم ليغطي كل الجوانب التقنية والفنية التي تحتاجينها لتصبحي شيف حلويات متميزة
-                    </p>
-                    
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-ds-gold mt-1 ml-3 text-xl"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-lg font-medium text-ds-choco">أسرار العجائن الأساسية (Pâtes de base).</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-ds-gold mt-1 ml-3 text-xl"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-lg font-medium text-ds-choco">الحلويات التقليدية (بقلاوة، دزيريات...) بلمسة عصرية.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-ds-gold mt-1 ml-3 text-xl"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-lg font-medium text-ds-choco">التحليات الفاخرة (Verrines & Desserts) للمناسبات.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-ds-gold mt-1 ml-3 text-xl"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-lg font-medium text-ds-choco">تقنيات التزيين والطلاء الاحترافي (Glaçage Miroir & Velvet).</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-ds-gold mt-1 ml-3 text-xl"><i class="fas fa-plus"></i></span>
-                            <span class="text-lg font-medium text-ds-choco italic">والمزيد ...</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Removed "From Zero to Professional" Section -->
 
     <section id="register" class="py-20 bg-ds-choco text-white relative">
         <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 20px 20px;"></div>
@@ -363,11 +321,11 @@
                     </p>
 
                     <div class="flex flex-col md:flex-row gap-4 justify-center">
-                        <!-- MODIFIED: Button now Direct Link -->
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_bjzzZMbh2qLaD8dk144d0rYzfcFYuRcW7RyI-7huuCJyPA/viewform?usp=header" target="_blank" class="flex items-center justify-center bg-transparent border-2 border-white hover:bg-white hover:text-ds-choco text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 w-full md:w-auto cursor-pointer no-underline">
+                        <!-- Button: Triggers Custom Form Modal -->
+                        <button onclick="openFormModal()" class="flex items-center justify-center bg-transparent border-2 border-white hover:bg-white hover:text-ds-choco text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 w-full md:w-auto cursor-pointer no-underline">
                             <i class="fas fa-clipboard-check ml-2"></i>
                             سجلي بياناتك وسنتواصل معك
-                        </a>
+                        </button>
                         
                         <!-- Whatsapp Button -->
                         <a href="https://wa.me/message/EKBPZNHXV2MKI1" class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg w-full md:w-auto">
@@ -404,6 +362,51 @@
         </div>
     </footer>
 
+    <!-- CUSTOM FORM MODAL -->
+    <div id="formModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 transition-opacity duration-300 opacity-0" onclick="closeFormModal(event)">
+        <div class="relative w-full max-w-md bg-white rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col" onclick="event.stopPropagation()">
+             
+            <!-- Modal Header -->
+            <div class="bg-ds-choco text-white p-4 flex justify-between items-center shadow-md relative z-10">
+                <h3 class="font-bold text-lg font-serif text-ds-gold">استمارة التسجيل</h3>
+                <button onclick="closeFormModal()" class="text-white hover:text-red-500 transition w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Custom Form Body -->
+            <div class="p-6 bg-ds-cream">
+                <form id="contact-form" name="google-sheet" class="space-y-4">
+                    
+                    <div class="space-y-1">
+                        <label for="Name" class="block text-sm font-bold text-ds-choco">الاسم الكامل</label>
+                        <input type="text" id="Name" name="Name" placeholder="فلانة" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ds-gold focus:border-ds-gold transition outline-none text-right">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label for="Email" class="block text-sm font-bold text-ds-choco">البريد الإلكتروني (اختياري)</label>
+                        <input type="email" id="Email" name="Email" placeholder="example@email.com"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ds-gold focus:border-ds-gold transition outline-none text-right" dir="ltr">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label for="Phone" class="block text-sm font-bold text-ds-choco">رقم الهاتف</label>
+                        <input type="tel" id="Phone" name="Phone" placeholder="05XXXXXXXX" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ds-gold focus:border-ds-gold transition outline-none text-right" dir="ltr">
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-ds-gold hover:bg-ds-choco text-ds-choco hover:text-white font-bold py-3 rounded-lg transition duration-300 shadow-md transform active:scale-95 mt-4">
+                        إرسال المعلومات
+                    </button>
+                    
+                    <p id="status-message" class="text-center text-sm font-medium min-h-[20px]"></p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
     <script>
         // Sticky Navbar Script
         const navbar = document.getElementById('navbar');
@@ -418,6 +421,85 @@
                 navbar.classList.add('bg-transparent', 'py-6');
                 navbar.classList.remove('bg-ds-choco/95', 'backdrop-blur-md', 'shadow-xl', 'py-3');
             }
+        });
+
+        // Modal Functions
+        function openFormModal() {
+            const modal = document.getElementById('formModal');
+            const modalContent = modal.querySelector('div');
+            
+            modal.classList.remove('hidden');
+            
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFormModal(event) {
+            if (event && event.target !== document.getElementById('formModal')) {
+                return;
+            }
+
+            const modal = document.getElementById('formModal');
+            const modalContent = modal.querySelector('div');
+            
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // --- Custom Form Script ---
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzcX3YbFvQehu92NsPmdk74EpsTH8vuGooxhmmDyVpIGjRbCLm_5frTm6R19slpBjkzqw/exec';
+        const form = document.forms['contact-form'];
+        const statusMessage = document.getElementById('status-message');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // 1. Loading State
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> جاري الإرسال...';
+            statusMessage.innerText = "";
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // 2. Send Data
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // Success!
+                    statusMessage.innerHTML = '<span class="text-green-600"><i class="fas fa-check-circle ml-1"></i> تم تسجيل معلوماتك بنجاح! سنتصل بك قريباً.</span>';
+                    submitBtn.innerText = "تم الإرسال";
+                    submitBtn.classList.remove('bg-ds-gold', 'text-ds-choco');
+                    submitBtn.classList.add('bg-green-600', 'text-white');
+                    form.reset();
+                    
+                    // Reset button after 3 seconds and close modal
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = "إرسال المعلومات";
+                        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-green-600', 'text-white');
+                        submitBtn.classList.add('bg-ds-gold', 'text-ds-choco');
+                        statusMessage.innerText = "";
+                        closeFormModal(); // Auto close on success
+                    }, 3000);
+                })
+                .catch(error => {
+                    // Error!
+                    statusMessage.innerHTML = '<span class="text-red-600"><i class="fas fa-exclamation-triangle ml-1"></i> حدث خطأ! يرجى المحاولة مرة أخرى.</span>';
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "إرسال المعلومات";
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    console.error('Error!', error.message);
+                });
         });
     </script>
 
