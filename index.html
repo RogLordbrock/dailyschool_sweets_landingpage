@@ -96,67 +96,11 @@
         </div>
     </nav>
 
-    <!-- Modified Header: Reduced padding-top to pt-24 (96px) to create the 0.5cm gap below the navbar -->
-    <header class="relative h-[85vh] flex items-start md:items-center justify-center overflow-hidden pt-24 md:pt-0">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2589&auto=format&fit=crop" 
-                 alt="Delicious Entremet Cake Macro" 
-                 class="w-full h-full object-cover brightness-50">
-        </div>
-        
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <div class="inline-block bg-red-600 text-white px-6 py-2 rounded-full mb-6 animate-pulse shadow-lg border-2 border-white/20">
-                <i class="fas fa-exclamation-circle ml-2"></i>
-                <span class="font-bold">تنبيه: فوج السبت ممتلئ (Complet)</span>
-            </div>
+    <!-- Header removed as requested. Page starts with Gallery Section -->
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight text-shadow">
-                <span class="text-ds-gold font-roboto bold drop-shadow-lg">كل اصبع بصنعة</span>
-            </h1>
-
-            <!-- Modified Stats Section: Added drop-shadow-md -->
-            <div class="flex flex-wrap justify-center gap-8 py-5 drop-shadow-md">
-             <div class="text-center">
-                 <div class="text-4xl md:text-5xl font-bold text-ds-gold font-serif">+70</div>
-                 <div class="text-sm font-bold text-ds-gold">وصفة متنوعة</div>
-             </div>
-             <div class="w-px bg-ds-gold/50 hidden md:block"></div>
-             <div class="text-center">
-                <div class="text-4xl md:text-5xl font-bold text-ds-gold font-serif">12</div>
-                <div class="text-sm font-bold text-ds-gold">وصفة شهرياً</div>
-             </div>
-             <div class="w-px bg-ds-gold/50 hidden md:block"></div>
-             <div class="text-center">
-                 <div class="text-4xl md:text-5xl font-bold text-ds-gold font-serif">100%</div>
-                 <div class="text-sm font-bold text-ds-gold">تطبيقي</div>
-             </div>
-            </div>
-
-            <!-- New Text Section (Placeholder for Image Text) -->
-            <!-- Increased font size by ~25%: text-base -> text-xl, md:text-xl -> md:text-2xl -->
-            <p class="text-xl md:text-2xl text-white font-medium mb-8 leading-relaxed drop-shadow-md">
-                دورة احترافية شاملة في صناعة الحلويات التقليدية والعصرية <br/>
-                تحت إشراف <span class="font-bold text-ds-gold">عضوة لجنة التحكيم</span> في مسابقات الطبخ والحلويات <span class="font-bold text-ds-gold">الشاف سهام</span>
-            </p>
-
-
-            <!-- Modified: Two Paralleled Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-                <!-- Direct Link Button -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_bjzzZMbh2qLaD8dk144d0rYzfcFYuRcW7RyI-7huuCJyPA/viewform?usp=header" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-ds-gold text-ds-choco px-8 py-4 rounded-full text-lg md:text-xl font-bold hover:bg-white hover:text-ds-choco transform hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(212,175,55,0.5)] cursor-pointer no-underline">
-                    سجلي الآن - فوج الأربعاء متاح
-                </a>
-
-                <!-- Reduced height by changing py-4 to py-3 (approx 15% reduction) -->
-                <a href="https://wa.me/message/EKBPZNHXV2MKI1" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-green-600/90 backdrop-blur-sm border-2 border-green-500 text-white px-8 py-3 rounded-full text-lg md:text-xl font-bold hover:bg-green-600 transform hover:scale-105 transition duration-300 shadow-lg">
-                    <i class="fab fa-whatsapp ml-2 text-2xl"></i>
-                    تواصلي معنا
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <section class="py-12 bg-ds-choco relative overflow-hidden border-b-8 border-ds-gold">
+    <!-- Gallery Section -->
+    <!-- Added pt-32 to account for fixed navbar overlay -->
+    <section class="pt-32 pb-12 bg-ds-choco relative overflow-hidden border-b-8 border-ds-gold">
         <div class="container mx-auto px-4 mb-8 text-center relative z-10">
             <!-- Removed 'معرض الأعمال' span -->
             <h2 class="text-2xl md:text-3xl font-bold text-white">
